@@ -1,0 +1,89 @@
+:root {
+  --condiv-flex: 6;
+  --fontsize-p: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.mobileCenter {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.subtopic {
+  margin: 10px 10px 30px 10px !important;
+}
+
+p {
+  font-size: var(--fontsize-p);
+}
+
+h1, h2, h3, h4, p {
+  margin: 10px;
+}
+
+.card {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card:hover {
+  color: #1b1d20;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.active {
+  font-weight: bolder;
+}
+
+@media all and (max-width: 450px) {
+  :root {
+    --fontsize-nav: 1rem;
+    --sidebar-flex: 0;
+    --typing-font: 2rem;
+  }
+
+  .App {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    padding: 30px;
+  }
+
+  .condiv {
+    flex: 0 1;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["table.css"],"names":[],"mappings":"AAAA,kCACI,qCACJ,CAEA,kCACI,oBACJ","file":"4.6f245c28.chunk.css","sourcesContent":[".ag-theme-alpine .ag-ltr .ag-cell {\n    border-right: 1px solid #000000 !important;\n} \n\n.ag-root-wrapper.ag-layout-normal {\n    height: 96% !important;\n}"]}

@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+//@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+$white: #fff;
+$blue: #1161ed;
+$blueHover: #4082f5;
+
+body {
+	padding: 2% 0;
+	background: #d6d6d6;
+	font-family: 'Montserrat', sans-serif;
+	color: $white;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 483px;
+	margin: 0 auto;
+  
+	.login {
+		width: 80.8%;
+		position: relative;
+		margin: 0 auto;
+		padding: 17.5% 9.6% 9.5%;
+		background: url("http://res.cloudinary.com/dcwodeda4/image/upload/v1502999946/DayOneBg_zhnovh.png") no-repeat;
+		background-size: cover;
+		box-shadow: 0px 28px 72px -8px #000;
+
+		.logo {
+			margin-bottom: 10%;
+		}
+
+		.tabs {
+			margin-left: 3.5%;
+
+			.tab {
+				max-width: 40%;
+				display: inline-block;
+				position: relative;
+				margin-right: 9%;
+				font-size: 22px;
+				letter-spacing: 2px;
+				word-spacing: -1px;
+				white-space: nowrap;
+				opacity: 0.2;
+				cursor: pointer;
+
+				&.active {
+					opacity: 1;
+
+					&:after {
+						content: "";
+						height: 2px;
+						position: absolute;
+						left: 1px;
+						right: 5px;
+						bottom: -8px;
+						background: $blue;
+					}
+				}
+			}
+		}
+
+		form {
+			margin-top: 31.5%;
+
+			.input {
+				position: relative;
+
+				label {
+					position: absolute;
+					top: 0;
+					left: 0;
+					margin-top: -6.42%;
+					padding-left: 3.5%;  
+					font-size: 13px;
+					font-weight: 500;
+					opacity: 0.5;
+					transition: all 0.3s ease
+				}
+
+				input {
+					width: 100%;
+					height: 34px;
+					margin-bottom: 10.5%;
+					padding: 0 3.5%;
+					border-radius: 18px;
+					background: rgba($white, 0.1);
+					border: 2px solid transparent;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 14px;
+					color: $white;
+					transition: all 0.3s ease;
+
+					&#password { margin-bottom: 7.5%; }
+
+					&:focus {
+						background: transparent;
+						outline: none;
+						border: 2px solid rgba($white, 0.4);
+
+						& + label { opacity: 0.7; }
+					}
+				}
+			}
+
+			button {
+				width: 100%;
+				height: 38px;
+				margin: 6.5% 0;
+				border-radius: 18px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				font-weight: 600;
+				color: $white;
+				background: $blue;
+				border: none;
+				cursor: pointer;
+
+				&:focus { outline: none; }
+
+				&:hover {
+					background: $blueHover;
+					box-shadow: 1px 2px 40px -8px $blueHover;
+				}
+			}
+		}
+  	}
+}
