@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { AgGridReact } from 'ag-grid-react';
+import cellConversion from './Cellconversions'
 import './table.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
@@ -29,157 +30,6 @@ async function pushDataToDb(pushData, table) {
     }
 
 }
-
-function temps(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' °C';
-    } else {
-        return 'in °C';
-    }
-}
-
-function pressure(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' mbar';
-    } else {
-        return 'in mbar';
-    }
-}
-
-function overpressure(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' barü';
-    } else {
-        return 'in barü';
-    }
-}
-
-function density(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' kg/Nm³/h';
-    } else {
-        return 'in kg/Nm³/h';
-    }
-    
-}
-
-function millimeters(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' mm';
-    } else {
-        return  'in mm';
-    }
-}
-
-function meters(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' m';
-    } else {
-        return  'in m';
-    }
-    
-}
-
-function volumeFlow(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' Nm³/h';
-    } else {
-        return 'in Nm³/h';
-    }
-    
-}
-
-function weight(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' kg';
-    } else {
-        return 'in kg';
-    }
-    
-}
-
-function massFlow(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' kg/h';
-    } else {
-        return 'in kg/h';
-    }
-    
-}
-
-function rpm(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' U/min';
-    } else {
-        return 'in U/min';
-    }
-}
-
-function space(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' m²';
-    } else {
-        return 'in m²';
-    }
-    
-}
-
-function solidsContent(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' g/kg';
-    } else {
-        return 'in g/kg';
-    }
-}
-
-function conveyingVolume(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' m³/h';
-    } else {
-        return 'in m³/h';
-    }
-}
-
-function protectionClass(params) {
-    if (params.value || params.value === 0) {
-        return 'IP' + params.value;
-    } else {
-        return 'als Schutzartnummer';
-    }
-}
-
-function power(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' kW';
-    } else {
-        return 'in kW';
-    }
-}
-
-function voltage(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' V';
-    } else {
-        return 'in V';
-    }
-}
-
-function current(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' A';
-    } else {
-        return 'in A';
-    }
-}
-
-function volume(params) {
-    if (params.value || params.value === 0) {
-        return params.value + ' m³';
-    } else {
-        return 'in m³';
-    } 
-}
-
 
 export default class Table extends Component {
     constructor(props) {
@@ -290,8 +140,10 @@ export default class Table extends Component {
     }
 
     render() {
-        const { tableData } = this.props
-        const { table } = this.state
+        const { tableData } = this.props;
+        const { table } = this.state;
+        const cc = cellConversion;
+        console.log(cc)
         let button;
 
         const columns = tableData.slice(0,1).map(( header ) => {
@@ -318,7 +170,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: temps,
+                            valueFormatter: cc.temps,
                         })
                     } else if (
                         column.headerName === 'Druck max hPa_a' || 
@@ -332,7 +184,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: pressure,
+                            valueFormatter: cc.pressure,
                         })
                     } else if (
                         column.headerName === 'Berechnungsüberdruck' || 
@@ -343,7 +195,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: overpressure,
+                            valueFormatter: cc.overpressure,
                         })
                     } else if (
                         column.headerName === 'Dichte max' || 
@@ -354,7 +206,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: density,
+                            valueFormatter: cc.density,
                         })
                     } else if (
                         column.headerName === 'Durchmesser' || 
@@ -368,7 +220,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: millimeters,
+                            valueFormatter: cc.millimeters,
                         })
                     } else if (
                         column.headerName === 'Kabel 1 Länge' || 
@@ -385,7 +237,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: meters,
+                            valueFormatter: cc.meters,
                         })
                     } else if (
                         column.headerName === 'Volumenstrom max' || 
@@ -396,7 +248,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: volumeFlow,
+                            valueFormatter: cc.volumeFlow,
                         })
                     } else if (
                         column.headerName === 'Massenstrom max' || 
@@ -407,7 +259,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: massFlow,
+                            valueFormatter: cc.massFlow,
                         })
                     } else if (
                         column.headerName === 'Drehzahl'  
@@ -416,7 +268,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: rpm,
+                            valueFormatter: cc.rpm,
                         })
                     } else if (
                         column.headerName === 'Raumfläche' ||
@@ -426,7 +278,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: space,
+                            valueFormatter: cc.space,
                         })
                     } else if (
                         column.headerName === 'Feststoffgehalt max' || 
@@ -437,7 +289,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: solidsContent,
+                            valueFormatter: cc.solidsContent,
                         })
                     } else if (
                         column.headerName === 'Fördervolumen' 
@@ -446,7 +298,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: conveyingVolume,
+                            valueFormatter: cc.conveyingVolume,
                         })
                     } else if (
                         column.headerName === 'Gewicht'
@@ -455,7 +307,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: weight,
+                            valueFormatter: cc.weight,
                         })
                     } else if (
                         column.headerName === 'IP-Schutzart'
@@ -464,7 +316,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: protectionClass,
+                            valueFormatter: cc.protectionClass,
                         })
                     } else if (
                         column.headerName === 'Nennleistung'
@@ -473,7 +325,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: power,
+                            valueFormatter: cc.power,
                         })
                     } else if (
                         column.headerName === 'Nennspannung'
@@ -482,7 +334,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: voltage,
+                            valueFormatter: cc.voltage,
                         })
                     } else if (
                         column.headerName === 'Nennstrom'
@@ -491,7 +343,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: current,
+                            valueFormatter: cc.current,
                         })
                     } else if (
                         column.headerName === 'Raumvolumen' ||
@@ -501,7 +353,7 @@ export default class Table extends Component {
                             headerName: column.headerName,
                             field: column.field,
                             editable: column.editable,
-                            valueFormatter: volume,
+                            valueFormatter: cc.volume,
                         })
                     } else {
                         return({
@@ -527,6 +379,7 @@ export default class Table extends Component {
                 <nav className="navbar navbar-light bg-light">
                     <h2 className="navbar-brand">{table}</h2>
                     {button}
+                    {/*loading*/}
                 </nav>
                 <div className="ag-theme-alpine" style={ { height: 'calc(100% - 60px)', width: '100%'} }>
                     <AgGridReact

@@ -1,73 +1,154 @@
-export default function cellConversion() {
-    function temps(params) {
-        return params.value + ' °C';
-    }
+const cellConversion = {
+
+    temps: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' °C';
+        } else {
+            return 'in °C';
+        }
+    },
     
-    function pressure(params) {
-        return params.value + ' mbar';
-    }
+    pressure: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' mbar';
+        } else {
+            return 'in mbar';
+        }
+    },
     
-    function overpressure(params) {
-        return params.value + ' barü';
-    }
+    overpressure: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' barü';
+        } else {
+            return 'in barü';
+        }
+    },
     
-    function density(params) {
-        return params.value + ' kg/Nm³/h';
-    }
+    density: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' kg/Nm³/h';
+        } else {
+            return 'in kg/Nm³/h';
+        }
+        
+    },
     
-    function millimeters(params) {
-        return params.value + ' mm';
-    }
+    millimeters: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' mm';
+        } else {
+            return  'in mm';
+        }
+    },
     
-    function meters(params) {
-        return params.value + ' m';
-    }
+    meters: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' m';
+        } else {
+            return  'in m';
+        }
+        
+    },
     
-    function volumeFlow(params) {
-        return params.value + ' Nm³/h';
-    }
+    volumeFlow: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' Nm³/h';
+        } else {
+            return 'in Nm³/h';
+        }
+        
+    },
     
-    function weight(params) {
-        return params.value + ' kg';
-    }
+    weight: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' kg';
+        } else {
+            return 'in kg';
+        }
+        
+    },
     
-    function massFlow(params) {
-        return params.value + ' kg/h';
-    }
+    massFlow: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' kg/h';
+        } else {
+            return 'in kg/h';
+        }
+        
+    },
     
-    function rpm(params) {
-        return params.value + ' U/min';
-    }
+    rpm: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' U/min';
+        } else {
+            return 'in U/min';
+        }
+    },
     
-    function space(params) {
-        return params.value + ' m²';
-    }
+    space: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' m²';
+        } else {
+            return 'in m²';
+        }
+        
+    },
     
-    function solidsContent(params) {
-        return params.value + ' g/kg';
-    }
+    solidsContent: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' g/kg';
+        } else {
+            return 'in g/kg';
+        }
+    },
     
-    function conveyingVolume(params) {
-        return params.value + ' m³/h';
-    }
+    conveyingVolume: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' m³/h';
+        } else {
+            return 'in m³/h';
+        }
+    },
     
-    function protectionClass(params) {
-        return 'IP' + params.value;
-    }
+    protectionClass: function(params) {
+        if (params.value || params.value === 0) {
+            return 'IP' + params.value;
+        } else {
+            return 'als Schutzartnummer';
+        }
+    },
     
-    function power(params) {
-        return params.value + ' kW';
-    }
+    power: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' kW';
+        } else {
+            return 'in kW';
+        }
+    },
     
-    function voltage(params) {
-        return params.value + ' V';
-    }
+    voltage: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' V';
+        } else {
+            return 'in V';
+        }
+    },
     
-    function current(params) {
-        return params.value + ' A';
-    }
+    current: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' A';
+        } else {
+            return 'in A';
+        }
+    },
     
-    function volume(params) {
-        return params.value + ' m³';
-    }
-}
+    volume: function(params) {
+        if (params.value || params.value === 0) {
+            return params.value + ' m³';
+        } else {
+            return 'in m³';
+        } 
+    },
+};
+
+export default cellConversion;
