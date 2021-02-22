@@ -31,7 +31,7 @@ async function pushDataToDb(pushData, table) {
 }
 
 function temps(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' °C';
     } else {
         return 'in °C';
@@ -39,7 +39,7 @@ function temps(params) {
 }
 
 function pressure(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' mbar';
     } else {
         return 'in mbar';
@@ -47,7 +47,7 @@ function pressure(params) {
 }
 
 function overpressure(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' barü';
     } else {
         return 'in barü';
@@ -55,7 +55,7 @@ function overpressure(params) {
 }
 
 function density(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' kg/Nm³/h';
     } else {
         return 'in kg/Nm³/h';
@@ -64,7 +64,7 @@ function density(params) {
 }
 
 function millimeters(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' mm';
     } else {
         return  'in mm';
@@ -72,7 +72,7 @@ function millimeters(params) {
 }
 
 function meters(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' m';
     } else {
         return  'in m';
@@ -81,7 +81,7 @@ function meters(params) {
 }
 
 function volumeFlow(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' Nm³/h';
     } else {
         return 'in Nm³/h';
@@ -90,7 +90,7 @@ function volumeFlow(params) {
 }
 
 function weight(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' kg';
     } else {
         return 'in kg';
@@ -99,7 +99,7 @@ function weight(params) {
 }
 
 function massFlow(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' kg/h';
     } else {
         return 'in kg/h';
@@ -108,7 +108,7 @@ function massFlow(params) {
 }
 
 function rpm(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' U/min';
     } else {
         return 'in U/min';
@@ -116,7 +116,7 @@ function rpm(params) {
 }
 
 function space(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' m²';
     } else {
         return 'in m²';
@@ -125,7 +125,7 @@ function space(params) {
 }
 
 function solidsContent(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' g/kg';
     } else {
         return 'in g/kg';
@@ -133,7 +133,7 @@ function solidsContent(params) {
 }
 
 function conveyingVolume(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' m³/h';
     } else {
         return 'in m³/h';
@@ -141,7 +141,7 @@ function conveyingVolume(params) {
 }
 
 function protectionClass(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return 'IP' + params.value;
     } else {
         return 'als Schutzartnummer';
@@ -149,7 +149,7 @@ function protectionClass(params) {
 }
 
 function power(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' kW';
     } else {
         return 'in kW';
@@ -157,7 +157,7 @@ function power(params) {
 }
 
 function voltage(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' V';
     } else {
         return 'in V';
@@ -165,7 +165,7 @@ function voltage(params) {
 }
 
 function current(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' A';
     } else {
         return 'in A';
@@ -173,7 +173,7 @@ function current(params) {
 }
 
 function volume(params) {
-    if (params.value) {
+    if (params.value || params.value === 0) {
         return params.value + ' m³';
     } else {
         return 'in m³';
