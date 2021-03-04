@@ -143,7 +143,6 @@ export default class Table extends Component {
         const { tableData } = this.props;
         const { table } = this.state;
         const cc = cellConversion;
-        console.log(cc)
         let button;
 
         const columns = tableData.slice(0,1).map(( header ) => {
