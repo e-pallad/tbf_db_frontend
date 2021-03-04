@@ -1,8 +1,12 @@
+function dotConversion(value) {
+    return value.toString().replace('.', ',');
+}
+
 const cellConversion = {
 
     temps: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' °C';
+            return dotConversion(params.value) + ' °C';
         } else {
             return 'in °C';
         }
@@ -10,7 +14,7 @@ const cellConversion = {
     
     pressure: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' mbar';
+            return dotConversion(params.value) + ' mbar';
         } else {
             return 'in mbar';
         }
@@ -18,7 +22,7 @@ const cellConversion = {
     
     overpressure: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' barü';
+            return dotConversion(params.value) + ' barü';
         } else {
             return 'in barü';
         }
@@ -26,7 +30,7 @@ const cellConversion = {
     
     density: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' kg/Nm³/h';
+            return dotConversion(params.value) + ' kg/Nm³/h';
         } else {
             return 'in kg/Nm³/h';
         }
@@ -35,7 +39,7 @@ const cellConversion = {
     
     millimeters: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' mm';
+            return dotConversion(params.value) + ' mm';
         } else {
             return  'in mm';
         }
@@ -43,7 +47,7 @@ const cellConversion = {
     
     meters: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' m';
+            return dotConversion(params.value) + ' m';
         } else {
             return  'in m';
         }
@@ -52,7 +56,7 @@ const cellConversion = {
     
     volumeFlow: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' Nm³/h';
+            return dotConversion(params.value) + ' Nm³/h';
         } else {
             return 'in Nm³/h';
         }
@@ -61,7 +65,7 @@ const cellConversion = {
     
     weight: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' kg';
+            return dotConversion(params.value) + ' kg';
         } else {
             return 'in kg';
         }
@@ -70,7 +74,7 @@ const cellConversion = {
     
     massFlow: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' kg/h';
+            return dotConversion(params.value) + ' kg/h';
         } else {
             return 'in kg/h';
         }
@@ -79,7 +83,7 @@ const cellConversion = {
     
     rpm: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' U/min';
+            return dotConversion(params.value) + ' U/min';
         } else {
             return 'in U/min';
         }
@@ -87,7 +91,7 @@ const cellConversion = {
     
     space: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' m²';
+            return dotConversion(params.value) + ' m²';
         } else {
             return 'in m²';
         }
@@ -96,7 +100,7 @@ const cellConversion = {
     
     solidsContent: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' g/kg';
+            return dotConversion(params.value) + ' g/kg';
         } else {
             return 'in g/kg';
         }
@@ -104,7 +108,7 @@ const cellConversion = {
     
     conveyingVolume: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' m³/h';
+            return dotConversion(params.value) + ' m³/h';
         } else {
             return 'in m³/h';
         }
@@ -120,7 +124,7 @@ const cellConversion = {
     
     power: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' kW';
+            return dotConversion(params.value) + ' kW';
         } else {
             return 'in kW';
         }
@@ -128,7 +132,7 @@ const cellConversion = {
     
     voltage: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' V';
+            return dotConversion(params.value) + ' V';
         } else {
             return 'in V';
         }
@@ -136,7 +140,7 @@ const cellConversion = {
     
     current: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' A';
+            return dotConversion(params.value) + ' A';
         } else {
             return 'in A';
         }
@@ -144,7 +148,7 @@ const cellConversion = {
     
     volume: function(params) {
         if (params.value || params.value === 0) {
-            return params.value + ' m³';
+            return dotConversion(params.value) + ' m³';
         } else {
             return 'in m³';
         } 
