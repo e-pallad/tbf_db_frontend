@@ -9,7 +9,6 @@ body {
 	padding: 2% 0;
 	background: #d6d6d6;
 	font-family: 'Montserrat', sans-serif;
-	//color: $white;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -19,6 +18,7 @@ body {
 	width: 90%;
 	max-width: 483px;
 	margin: 0 auto;
+	color: $white;
   
 	.login {
 		width: 80.8%;
