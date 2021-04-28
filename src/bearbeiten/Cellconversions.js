@@ -1,5 +1,5 @@
 function dotConversion(value) {
-    return value.toString().replace('.', ',');
+    return value //.toString().replace('.', ',');
 }
 
 const cellConversion = {
