@@ -208,12 +208,11 @@ export default class Table extends Component {
                             valueFormatter: cc.density,
                         })
                     } else if (
-                        column.headerName === 'Durchmesser' || 
-                        column.headerName === 'Höhe' || 
+                        column.headerName === 'Durchmesser' ||
                         column.headerName === 'Länge [mm]' || 
                         column.headerName === 'Radius' || 
-                        column.headerName === 'Wanddicke' || 
-                        column.headerName === 'Breite' 
+                        column.headerName === 'Wanddicke'
+                        
                     ) {
                         return({
                             headerName: column.headerName,
@@ -228,6 +227,8 @@ export default class Table extends Component {
                         column.headerName === 'Kabel 4 Länge' || 
                         column.headerName === 'Kabel 5 Länge' || 
                         column.headerName === 'Länge [m]' ||
+                        column.headerName === 'Breite' || 
+                        column.headerName === 'Höhe' || 
                         column.headerName === 'Raumlänge' || 
                         column.headerName === 'Raumbreite' || 
                         column.headerName === 'Raumhöhe' 
