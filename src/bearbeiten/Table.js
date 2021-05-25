@@ -355,6 +355,15 @@ export default class Table extends Component {
                             editable: column.editable,
                             valueFormatter: cc.volume,
                         })
+                    } else if (
+                        column.headerName == 'Schallleistung'
+                    ) {
+                        return({
+                            headerName: column.headerName,
+                            field: column.field,
+                            editable: column.editable,
+                            valueFormatter: cc.soundpower,
+                        })
                     } else {
                         return({
                             headerName: column.headerName,

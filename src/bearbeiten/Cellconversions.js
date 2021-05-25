@@ -153,6 +153,14 @@ const cellConversion = {
             return 'in m³';
         } 
     },
+
+    soundpower: function(params) {
+        if (params.value || params.value === 0) {
+            return dotConversion(params.value) + ' dB';
+        } else {
+            return 'in dB';
+        } 
+    },
 };
 
 export default cellConversion;
