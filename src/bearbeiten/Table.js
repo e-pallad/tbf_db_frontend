@@ -356,7 +356,7 @@ export default class Table extends Component {
                             valueFormatter: cc.volume,
                         })
                     } else if (
-                        column.headerName == 'Schallleistung'
+                        column.headerName === 'Schallleistung'
                     ) {
                         return({
                             headerName: column.headerName,
