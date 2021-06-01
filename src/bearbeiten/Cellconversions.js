@@ -156,7 +156,7 @@ const cellConversion = {
 
     soundpower: function(params) {
         if (params.value || params.value === 0) {
-            return dotConversion(params.value) + ' dB';
+            return dotConversion(params.value) + ' dB(A)';
         } else {
             return 'in dB';
         } 
