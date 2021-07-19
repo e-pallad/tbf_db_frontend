@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+
 /*
 import { useAuth } from "../context/auth";
 
@@ -50,9 +51,7 @@ export default class Admin extends Component {
         return(
             <div>
                 <h1>Admin Page</h1>
-                {
-                //<button onClick={logOut}>Log out</button>
-                }
+                <a href="https://tbf-db.ep-projekte.de/" class="btn btn-primary" role="button" aria-pressed="true">Zurück zur Hauptseite</a>
                 <div>
                     <h3>Restore DB entries</h3>
                     <div className="dropdown">
