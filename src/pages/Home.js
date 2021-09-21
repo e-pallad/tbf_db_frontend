@@ -26,7 +26,7 @@ export default class Home extends Component {
 					alias: results[1],
 					importieren: parseInt(results[2], 10),
 					bearbeiten: parseInt(results[3], 10),
-					auswerten: parseInt(results[4], 10),
+					/*auswerten: parseInt(results[4], 10),*/
 					exportieren: parseInt(results[5], 10),
 					erzeugen: parseInt(results[6], 10),
 				})
