@@ -4,7 +4,7 @@ import { Component } from "react";
 import ImportCard from '../cards/ImportCard';
 import BearbeitenCard from '../cards/BearbeitenCard';
 import ErzeugenCard from '../cards/ErzeugenCard';
-import AuswertenCard from '../cards/AuswertenCard';
+// import AuswertenCard from '../cards/AuswertenCard';
 import ExportCard from '../cards/ExportCard';
 
 export default class Home extends Component {
