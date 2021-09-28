@@ -21,6 +21,9 @@ export default function Login() {
         const config = { 
             method: 'POST',
             body: formData,
+            headers: {
+                'Access-Control-Allow-Origin': 'https://tbf-db-backend.ep-projekte.de/auth.php'
+            },
         };
         
         fetch("https://tbf-db-backend.ep-projekte.de/auth.php", config)
